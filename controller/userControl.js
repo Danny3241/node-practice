@@ -23,7 +23,7 @@ const signIn = async (req, res) => {
     try {
         // console.log(email, password);
         // const password = req.body.password;
-        const user = await userService.getUser({email:req.body.email})
+        const user = await userService.signIn({email:req.body.email})
         const compare = await user.comparePassword(req.body.password, user.password);
        
         if (compare) {

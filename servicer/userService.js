@@ -5,7 +5,7 @@ const createUser = async (user) => {
     return await User.create(user)
 }
 
-const getUser = async(user)=>{
+const signIn = async(user)=>{
     return await User.findOne(user)
 }
 
@@ -33,7 +33,7 @@ const getUserByBook = async (id) => {
 
 module.exports = {
     createUser,
-    getUser,
+    signIn,
     getAllUser,
     getUserById,
     updateUser,
